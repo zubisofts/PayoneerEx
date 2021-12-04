@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Payoneer Ex</string>
+    <string name="title_activity_products">Products Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="payment_networks_fragment_label">Payment Methods</string>
+    <string name="products_fragment_label">Products</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="connection_error_text">We can\'t fetch data at the moment, please check your internet connection and try again</string>
+    <string name="error_text">Something went wrong, please try again!</string>
+    <string name="not_found_text">Sorry the resource you are looking for could not be found!</string>
+    <string name="payment_details_form">Payment Details Form</string>
+</resources>

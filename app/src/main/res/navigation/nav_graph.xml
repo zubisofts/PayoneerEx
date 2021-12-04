@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ProductsFragment">
+
+    <fragment
+        android:id="@+id/PaymentNetworksFragment"
+        android:name="com.zubisofts.payoneerex.ui.paymentnetworks.PaymentNetworkSelectionFragment"
+        android:label="@string/payment_networks_fragment_label"
+        tools:layout="@layout/fragment_payment_networks">
+
+        <action
+            android:id="@+id/action_PaymentNetworksFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProductsFragment"
+        android:name="com.zubisofts.payoneerex.ui.products.ProductsFragment"
+        android:label="@string/products_fragment_label"
+        tools:layout="@layout/fragment_products">
+
+        <action
+            android:id="@+id/action_ProductsFragment_to_PayFragment"
+            app:destination="@id/PaymentNetworksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.zubisofts.payoneerex.ui.paymentdetails.PaymentFragment"
+        android:label="@string/payment_details_form"
+        tools:layout="@layout/payment_fragment" >
+        <argument
+            android:name="paymentMethod"
+            app:argType="com.zubisofts.payoneerex.model.Applicable" />
+    </fragment>
+</navigation>
